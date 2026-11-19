@@ -1,0 +1,74 @@
+/* Vesper theme (Rauno Freiberg) — matches waybar/hyprland:
+   #101010 bg, white fg, #A0A0A0 muted, #FFC799 accent, #99FFE4 teal, #FF8080 red */
+
+* {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+window {
+    background-color: rgba(16, 16, 16, 0.92);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 199, 153, 0.18);
+}
+
+#input {
+    margin: 10px;
+    padding: 8px 14px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    border: none;
+    caret-color: #ffc799;
+}
+
+#input image {
+    color: #a0a0a0;
+}
+
+#inner-box {
+    margin: 0 10px 10px 10px;
+}
+
+#outer-box {
+    margin: 0;
+}
+
+#scroll {
+    margin: 0;
+}
+
+#entry {
+    padding: 6px 10px;
+    margin: 2px 0;
+    border-radius: 10px;
+    color: #ffffff;
+    transition: all 0.15s ease-in-out;
+}
+
+#entry image {
+    margin-right: 14px;
+}
+
+#entry:selected {
+    background-color: #ffc799;
+    color: #101010;
+}
+
+#entry:hover {
+    background-color: rgba(255, 199, 153, 0.15);
+}
+
+#entry:selected image {
+    -gtk-icon-effect: none;
+}
+
+#text {
+    color: inherit;
+}
+
+#text:selected {
+    color: #101010;
+    font-weight: 600;
+}

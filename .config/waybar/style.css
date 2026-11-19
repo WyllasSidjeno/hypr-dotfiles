@@ -1,0 +1,276 @@
+/* Vesper theme (Rauno Freiberg) — #101010 bg, white fg, #A0A0A0 muted,
+   #FFC799 accent (temperature only), #99FFE4 teal (connectivity only),
+   #FF8080 red (critical/power only). Everything else: plain white. */
+
+* {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+#waybar {
+    background-color: rgba(16, 16, 16, 0.9);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 199, 153, 0.18);
+    color: #ffffff;
+    margin: 0;
+}
+
+/* workspaces */
+#workspaces {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    margin: 4px 0 4px 6px;
+    padding: 3px 5px;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    margin: 0 2px;
+    min-width: 12px;
+    border-radius: 10px;
+    color: #a0a0a0;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces button:hover {
+    background-color: rgba(255, 199, 153, 0.15);
+    color: #ffffff;
+}
+
+#workspaces button.active {
+    background-color: #ffc799;
+    color: #101010;
+    min-width: 22px;
+}
+
+#workspaces button.urgent {
+    background-color: #ff8080;
+    color: #101010;
+}
+
+/* divider between workspaces and window title */
+#window {
+    color: #a0a0a0;
+    padding: 0 10px 0 14px;
+    margin-left: 6px;
+    font-weight: 400;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* center clock */
+#clock {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 4px 16px;
+    margin: 4px 4px 4px 0;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#custom-weather {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 4px 16px;
+    margin: 4px 0;
+    color: #99ffe4;
+    font-weight: 600;
+}
+
+/* right-side modules as individual pills */
+#tray,
+#custom-keychron-mouse,
+#custom-keychron-keyboard,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#temperature.cpu,
+#temperature.gpu,
+#custom-gpu-usage,
+#disk.root,
+#disk.home,
+#disk.data,
+#custom-wallpaper-reset,
+#custom-power {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 4px 16px;
+    margin: 4px 4px;
+    color: #ffffff;
+}
+
+#custom-keychron-mouse.error {
+    color: #ff8080;
+}
+
+#custom-keychron-mouse.warning {
+    color: #ffc799;
+}
+
+#custom-keychron-mouse.critical {
+    color: #ff8080;
+    background-color: rgba(255, 128, 128, 0.18);
+}
+
+#custom-keychron-keyboard.error {
+    color: #ff8080;
+}
+
+#custom-keychron-keyboard.warning {
+    color: #ffc799;
+}
+
+#custom-keychron-keyboard.critical {
+    color: #ff8080;
+    background-color: rgba(255, 128, 128, 0.18);
+}
+
+#window,
+#clock {
+    font-weight: 600;
+}
+
+#tray {
+    margin-right: 6px;
+}
+
+/* gap before the audio/network cluster */
+#pulseaudio {
+    margin-left: 10px;
+}
+
+#custom-wallpaper-reset {
+    margin-left: 10px;
+    margin-right: 2px;
+    color: #a0a0a0;
+}
+
+#custom-wallpaper-reset:hover {
+    background-color: rgba(255, 199, 153, 0.15);
+    color: #ffffff;
+}
+
+#custom-power {
+    margin-right: 6px;
+    margin-left: 2px;
+    color: #ff8080;
+    font-size: 15px;
+}
+
+#custom-power:hover {
+    background-color: rgba(255, 128, 128, 0.18);
+}
+
+#pulseaudio.muted {
+    color: #8b8b8b;
+}
+
+#network {
+    color: #99ffe4;
+    margin-right: 10px;
+}
+
+#network.disconnected {
+    color: #ff8080;
+}
+
+#cpu {
+    color: #ffffff;
+    margin-left: 10px;
+}
+
+#memory {
+    color: #ffffff;
+}
+
+#custom-gpu-usage {
+    color: #ffffff;
+}
+
+#disk.root,
+#disk.home,
+#disk.data {
+    color: #ffffff;
+}
+
+/* group mouse battery + keyboard battery */
+#custom-keychron-mouse {
+    margin-right: 2px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#custom-keychron-keyboard {
+    margin-left: 2px;
+    border-radius: 0 12px 12px 0;
+}
+
+/* group CPU usage + CPU temp */
+#cpu {
+    margin-right: 2px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#temperature.cpu {
+    margin-left: 2px;
+    margin-right: 14px;
+    border-radius: 0 12px 12px 0;
+}
+
+/* group GPU usage + GPU temp */
+#custom-gpu-usage {
+    margin-right: 2px;
+    border-radius: 12px 0 0 12px;
+}
+#temperature.gpu {
+    margin-left: 2px;
+    margin-right: 14px;
+    border-radius: 0 12px 12px 0;
+}
+
+/* memory stands alone, extra gap before disk cluster */
+#memory {
+    margin-right: 14px;
+}
+
+/* group the three disk pills together */
+#disk.root {
+    margin-right: 2px;
+    border-radius: 12px 0 0 12px;
+}
+#disk.home {
+    margin-left: 2px;
+    margin-right: 2px;
+    border-radius: 0;
+}
+#disk.data {
+    margin-left: 2px;
+    margin-right: 14px;
+    border-radius: 0 12px 12px 0;
+}
+
+#temperature.cpu,
+#temperature.gpu {
+    color: #ffc799;
+}
+
+#temperature.cpu.critical,
+#temperature.gpu.critical {
+    color: #ff8080;
+    background-color: rgba(255, 128, 128, 0.18);
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #ff8080;
+}
